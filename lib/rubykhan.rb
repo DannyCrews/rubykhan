@@ -45,5 +45,31 @@ module KhanAcademy
 
 	end
 
+	class Playlist
+		attr_reader :translated_short_display_name, :assessment_items, :relative_url, :file_name, :author_name, :creation_date, :uses_assessment_items, :all_assessment_item_keys, :ka_url, :v_position, :translated_title, :translated_description_html, :display_name, :tracking_document_url, :tags, :summative, :live, :pretty_display_name, :translated_pretty_display_name, :problem_types, :curated_related_videos, :covers, :h_position, :translated_display_name, :sha1, :name, :prerequisites, :assessment_item_tags, :seconds_per_fast_problem, :short_display_name, :tutorial_only, :current_revision_key, :image_url_256, :content_ki, :translated_youtube_id, :has_questions, :keywords, :duration, :id, :description_html, :title, :progress_key, :edit_slug, :author_names, :deleted_mod_time, :description, :extra_properties, :node_slug, :deleted, :backup_timestamp, :date_added, :download_urls, :translated_youtube_lang, :kind, :url, :ka_user_license, :global_id, :sha, :translated_description, :image_url, :youtube_id, :position, :content_kind, :readable_id
+
+		def initialize(options)
+			options.each do |key, value| 
+		    unless key.to_s.empty?
+				  eval("@#{key}=#{value.inspect}")
+				end
+		  end
+		end
+
+		def self.get_exercises(topic)
+			uri = "http://www.KhanAcademy.org/api/v1/playlists/#{topic}/exercises"
+			options = HTTParty.get(uri)
+			new(options.first)
+		end
+
+		def self.get_videos(topic)
+			uri = "http://www.KhanAcademy.org/api/v1/playlists/#{topic}/videos"
+			options = HTTParty.get(uri)
+			new(options.first)
+		end
+
+	end
+
 end
+
 
