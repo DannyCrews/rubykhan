@@ -63,7 +63,20 @@ algebra.ka_url
 
 More specific topics (e.g. "differential-equations") can return videos and exercises.
 
+```ruby
+buddhist_art = KhanAcademy::Playlist.get_exercises("buddhist-art")
+buddhist_art.image_url
+buddhist_art.prerequisites
+buddhist_art.title
+buddhist_art.tutorial_only
+```
 
+```ruby
+buddhist_art_videos = KhanAcademy::Playlist.get_videos("buddhist-art")
+buddhist_art_videos.description
+buddhist_art_videos.title
+buddhist_art_videos.ka_url
+```
 
 More information about the Khan Academy API can be found at the [Khan Academy API Explorer](http://api-explorer.khanacademy.org/api/v1/).
 
