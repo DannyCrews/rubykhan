@@ -1,17 +1,78 @@
+# RubyKhan: a Khan Academy API gem
 
-gem 'khan_academy'
+```ruby
+gem 'rubykhan'
+```
 
+```ruby
+require 'rubykhan'
+```
 
-Example usage: 
+## Accessing the Khan Academy API
 
+Information from Khan academy's API is accessed through topic keywords called "slugs" that you can use in your API requests.  Topics are arranged hierarchically from the most general (e.g. "math", "science", "humanities") to the very specific. 
+
+To see the whole topic tree hash, you can instantiate a Topic Tree object:
+
+```ruby
 all = KhanAcademy::TopicTree.new
+```
+
+And you can inspect the whole hierarchy to see what is returned via json:
+
+```ruby
+all.topictree
+```
+
+You can also retrieve a hash of just the topic slugs to choose from for your further queries:
+
+```ruby
 all.topics
+```
 
-# returns a hash where the keys are the main topics and the values are an array of subtopics
+Another API query returns more detailed information about a topic, including its children, which can be other, more specific topics, or videos and exercises.  The most specific sub-sub-topics have videos and exercises, but the top-level topics don't, so you won't get any exercises for a topic like "math" or even something as specific as "algebra", but the topic "solving-linear-equations-and-inequalities does return some exercises.  It sometimes takes several queries to get to that level.
 
+To query about a topic, instantiate a topic object:
 
+```ruby
 getty_museum = KhanAcademy::Topic.new('getty-museum')
-description = getty_museum.description
+```
 
-newthing = KhanAcademy::Topic.new('solving-linear-equations-and-inequalities')
-newthing.subtopics
+You can access the json response directly with the `.json` method:
+
+```ruby
+getty_museum.json
+```
+
+You can also access many attributes with ruby attribute accessor methods:
+
+```ruby
+description = getty_museum.description
+title = getty_museum.title
+url = getty_museum.url
+parent_topic = getty_museum.parent_topic
+```
+
+To see the list of related subtopics and videos:
+
+```ruby
+children = getty_museum.children
+```
+
+```ruby
+algebra = KhanAcademy::Topic.new('algebra')
+algebra.subtopics
+```
+
+```ruby
+linear_equations = KhanAcademy::Topic.new('solving-linear-equations-and-inequalities')
+linear_equations.subtopics
+```
+
+More information about the Khan Academy API can be found at the [Khan Academy API Explorer](http://api-explorer.khanacademy.org/api/v1/).
+
+## FAQ: 
+
+Q: What's up with the name?
+
+A: It's a pun on [Crossing the Rubicon](https://www.khanacademy.org/humanities/history/ancient-medieval/Ancient/v/a-tour-through-ancient-rome-in-320-c-e).  You're welcome.  :P
