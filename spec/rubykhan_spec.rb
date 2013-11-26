@@ -1,13 +1,5 @@
 require 'spec_helper'
 
-describe Rubykhan do
-
-  describe ".new" do
-  end
-
-  describe ".configure" do
-  end
-  
 describe 'RubyKhan' do
 	describe '.new' do
     before do
