@@ -1,5 +1,14 @@
 # RubyKhan: a Khan Academy API gem
 
+
+[![Gem Version](https://badge.fury.io/rb/rubykhan.png)](http://badge.fury.io/rb/rubykhan)
+
+[![Coverage Status](https://coveralls.io/repos/abigezunt/rubykhan/badge.png)](https://coveralls.io/r/abigezunt/rubykhan)
+
+[![Build Status](https://travis-ci.org/abigezunt/rubykhan.png?branch=master)](https://travis-ci.org/abigezunt/rubykhan)
+
+[![Code Climate](https://codeclimate.com/github/abigezunt/rubykhan.png)](https://codeclimate.com/github/abigezunt/rubykhan)
+
 ```ruby
 gem 'rubykhan'
 ```
@@ -75,4 +84,4 @@ More information about the Khan Academy API can be found at the [Khan Academy AP
 
 Q: What's up with the name?
 
-A: It's a pun on [Crossing the Rubicon](https://www.khanacademy.org/humanities/history/ancient-medieval/Ancient/v/a-tour-through-ancient-rome-in-320-c-e).  You're welcome.  :P
+A: It's a pun on [Crossing the Rubicon](https://www.khanacademy.org/humanities/history/ancient-medieval/Ancient/v/a-tour-through-ancient-rome-in-320-c-e).  Julius Caesar would've used Ruby in his conquest of Gaul, and we want you to be able to use Ruby in your  Khan Academy app.  :)
