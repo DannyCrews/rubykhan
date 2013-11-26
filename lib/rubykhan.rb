@@ -1,138 +1,46 @@
-# require 'rubykhan/client'
-
-# module Rubykhan
-#   class << self
-#     # attr_accessor :key
-#     def configure
-#       yield self
-#     end
-
-#     def new
-#     end
-
-#     def method_missing(method, *args, &block)
-#       return super unless new.respond_to?(method)
-#       new.send(method, *args, &block)
-#     end
-
-#     def respond_to?(method, include_private=false)
-#       new.respond_to?(method, include_private) || super(method, include_private)
-#     end
-#   end
-# end
 require 'pry'
 require 'httparty'
 require 'json'
 
+
+def values(hsh, key)
+  return [] if !hsh.kind_of? Hash
+  v = hsh[key] ? [hsh[key]] : []
+  hsh.values.select{|i| i.kind_of? Hash or i.kind_of? Array}.each do |val|
+    if val.kind_of? Hash
+      v+= values(val, key)
+    else
+      val.each {|i| v+= values(i, key)}
+    end
+  end
+  return v
+end
+
+
 module KhanAcademy
 
-
-	class TopicTree
-		attr_reader :topictree
-
-	  def initialize
-	  	@topictree = HTTParty.get('http://www.khanacademy.org/api/v1/topictree')
-	  end
-
-	  def topics
-	    @main_topics = @topictree['children'].map { |topic| topic['slug']}	
-	  	topics = {}
-	  	@main_topics.each_with_index do |topic, index|
-	      topics[topic] = @topictree['children'][index]['children'].map {|subtopic| subtopic['slug']}
-	    end
-	    return topics
-	  end
-
-	end
-
-
-	class Topic
-		attr_reader :json
-
-		def initialize(topic_slug)
-			@topic_slug = topic_slug
-			@json = HTTParty.get("http://www.KhanAcademy.org/api/v1/topic/#{@topic_slug}")
+	class Topic 
+		attr_reader :icon_src, :domain_slug, :relative_url, :web_url, :ka_url, :translated_standalone_title, :translated_title, :gplus_url, :id, :old_key_name, :hide, :title, :child_data, :children, :twitter_url, :translated_description, :deleted_mod_time, :logo_image_url, :in_knowledge_map, :description, :x_pos, :node_slug, :deleted, :facebook_url, :backup_timestamp, :render_type, :background_image_url, :background_image_caption, :assessment_progress_key, :topic_page_url, :extended_slug, :slug, :tags, :kind, :in_topic_browser, :sha, :standalone_title, :y_pos, :current_revision_key, :content_kind
+		
+		def initialize(options)
+			options.each do |key, value| 
+		    unless key.to_s.empty?
+				  eval("@#{key}=#{value.inspect}")
+				end
+		  end
 		end
 
-		def title
-	  	@json['title']
-	  end
-
-	  def children
-	  	@json['children']
-	  end
-
-	  def kind
-	  	@json['kind']
-	  end
-
-	  def standalone_title
-	    @json['standalone_title']
-	  end
-
-		def description
-			@json['description']
+		def self.get_info(topic)
+			uri = "http://www.KhanAcademy.org/api/v1/topic/#{topic}"
+			options = HTTParty.get(uri)
+			new(options)
 		end
 
-		def slug
-			@json['slug']
+		def self.all
+			uri = "http://www.khanacademy.org/api/v1/topictree"
+			options = HTTParty.get(uri).to_hash
+			values(options, 'slug')
 		end
-
-		def node_slug
-			@json['node_slug']
-		end
-
-		def extended_slug
-			@json['extended_slug']
-		end
-
-		def facebook_url
-			@json['facebook_url']
-		end
-
-		def twitter_url
-			@json['twitter_url']
-		end
-
-		def web_url
-			@json['web_url']
-		end
-
-		def ka_url
-			@json['ka_url']
-		end
-
-		def url
-			@json['url'] || @json['ka_url'] || @json['web_url']
-		end
-
-		def topic_page_url
-		  @json['topic_page_url']
-		end
-
-		def subtopics_count
-			@json.children.count
-		end
-
-		def parent_topic
-			@json['domain_slug']
-		end
-
-		def icon_src
-			@json['icon_src']
-		end
-
-	  def subtopics
-	    @json['children'].map do |topic|
-	    	{title: topic['title'],
-	    	url: topic['url'],
-	      internal_id: topic['internal_id'],
-	      node_slug: topic['node_slug'],
-	      translated_title: topic['translated_title'],
-	      id: topic['id'],
-	      kind: topic['kind']}
-	    end
-	  end
 
 	end
 end

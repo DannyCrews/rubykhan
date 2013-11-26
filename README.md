@@ -10,76 +10,70 @@
 
 [![Code Climate](https://codeclimate.com/github/abigezunt/rubykhan.png)](https://codeclimate.com/github/abigezunt/rubykhan)
 
+This is a wrapper for the [Khan Academy API](http://api-explorer.khanacademy.org/api/v1/).  It is a work in progress, and only supports part of the API.  Any assistance with implementing extra calls would be appreciated!
+
+## Installation
+
+Add this line to your application's Gemfile:
+
 ```ruby
 gem 'rubykhan'
 ```
+
+And then execute:
+
+```ruby
+$ bundle
+```
+
+Or install it yourself as:
+
+```ruby
+$ gem install rubykhan
+```
+
+## Usage
+
+So far, this gem only accesses the publically available parts of the API, but you can request an API key and use OmniAuth to authenticate users using their Khan Academy logins, and to access specific information about users.  Try this [Khan Academy OmniAuth gem](https://github.com/dipil-saud/omniauth-khan-academy).
+
+In your main.rb file:
 
 ```ruby
 require 'rubykhan'
 ```
 
-## Accessing the Khan Academy API
-
 Information from Khan academy's API is accessed through topic keywords called "slugs" that you can use in your API requests.  Topics are arranged hierarchically from the most general (e.g. "math", "science", "humanities") to the very specific. 
 
-To see the whole topic tree hash, you can instantiate a Topic Tree object:
+
+You can see an array of all the topic slugs (which you can use for future queries):
 
 ```ruby
-all = KhanAcademy::TopicTree.new
+KhanAcademy::Topic.all
 ```
 
-And you can inspect the whole hierarchy to see what is returned via json:
+You can also get more information about a topic using the `.get_info` method:
 
 ```ruby
-all.topictree
+algebra = KhanAcademy::Topic.get_info('algebra')
+
+algebra.title
+algebra.description
+algebra.ka_url
 ```
 
-You can also retrieve a hash of just the topic slugs to choose from for your further queries:
+More specific topics (e.g. "differential-equations") can return videos and exercises.
 
-```ruby
-all.topics
-```
 
-Another API query returns more detailed information about a topic, including its children, which can be other, more specific topics, or videos and exercises.  The most specific sub-sub-topics have videos and exercises, but the top-level topics don't, so you won't get any exercises for a topic like "math" or even something as specific as "algebra", but the topic "solving-linear-equations-and-inequalities does return some exercises.  It sometimes takes several queries to get to that level.
-
-To query about a topic, instantiate a topic object:
-
-```ruby
-getty_museum = KhanAcademy::Topic.new('getty-museum')
-```
-
-You can access the json response directly with the `.json` method:
-
-```ruby
-getty_museum.json
-```
-
-You can also access many attributes with ruby attribute accessor methods:
-
-```ruby
-description = getty_museum.description
-title = getty_museum.title
-url = getty_museum.url
-parent_topic = getty_museum.parent_topic
-```
-
-To see the list of related subtopics and videos:
-
-```ruby
-children = getty_museum.children
-```
-
-```ruby
-algebra = KhanAcademy::Topic.new('algebra')
-algebra.subtopics
-```
-
-```ruby
-linear_equations = KhanAcademy::Topic.new('solving-linear-equations-and-inequalities')
-linear_equations.subtopics
-```
 
 More information about the Khan Academy API can be found at the [Khan Academy API Explorer](http://api-explorer.khanacademy.org/api/v1/).
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
 
 ## FAQ: 
 
