@@ -13,13 +13,20 @@ require 'webmock/rspec'
 
 WebMock.disable_net_connect!(:allow => 'coveralls.io')
 
+RSpec.configure do |config|
+  config.order = 'random'
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
+end
+
 def a_get(path)
   a_request(:get, 'http://www.khanacademy.org/api/v1/' + path)
 end
 
 def stub_get(path)
   stub_request(:get, 'http://www.khanacademy.org/api/v1/' + path)
-end
+require 'json'
 
 def fixture_path
   File.expand_path('../fixtures', __FILE__)
