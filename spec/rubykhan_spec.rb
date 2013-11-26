@@ -21,6 +21,7 @@ describe 'RubyKhan' do
     it "returns a hash of topics" do
       all = KhanAcademy::TopicTree.new
       expect(a_request(:get, 'http://www.KhanAcademy.org/api/v1/topictree')).to have_been_made
+
       expect(all.topics['cs']).to eq "programming"
     end
   end
