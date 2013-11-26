@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "rubykhan"
   spec.version       = Rubykhan::VERSION
   spec.authors       = ["Dan Crews", "Abby Howell"]
-  spec.email         = ["dancrews@me.com"]
+  spec.email         = ["abbyghowell@gmail.com", "dancrews@me.com"]
   spec.description   = %q{A Ruby wrapper for the Khan Academy API}
   spec.summary       = %q{Simplififies API requests}
   spec.homepage      = ""
