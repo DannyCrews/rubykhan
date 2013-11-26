@@ -27,6 +27,7 @@ end
 def stub_get(path)
   stub_request(:get, 'http://www.khanacademy.org/api/v1/' + path)
 require 'json'
+end
 
 def fixture_path
   File.expand_path('../fixtures', __FILE__)
