@@ -44,10 +44,18 @@ require 'rubykhan'
 Information from Khan academy's API is accessed through topic keywords called "slugs" that you can use in your API requests.  Topics are arranged hierarchically from the most general (e.g. "math", "science", "humanities") to the very specific. 
 
 
-You can see an array of all the topic slugs (which you can use for future queries):
+You can see an array of all the nested topic slugs (which you can use for future queries).  The default query is for 'extended_slug' which sounds gross, but which returns an array of nested topics of which you can pull out the most specific titles to look for videos and exercises:
 
 ```ruby
 KhanAcademy::Topic.all
+```
+
+You can also pass in a key and find all the titles, or the urls, or the topic slugs.  For example:
+
+```ruby
+KhanAcademy::Topic.all('slug')
+KhanAcademy::Topic.all('title')
+KhanAcademy::Topic.all('node_slug')
 ```
 
 You can also get more information about a topic using the `.get_info` method:
@@ -60,7 +68,7 @@ algebra.description
 algebra.ka_url
 ```
 
-More specific topics (e.g. "differential-equations") can return videos and exercises.
+More specific topics (e.g. "differential-equations", "buddhist-art", "blood-vessels") can return videos and exercises.
 
 ```ruby
 buddhist_art = KhanAcademy::Playlist.get_exercises("buddhist-art")
@@ -71,10 +79,10 @@ buddhist_art.tutorial_only
 ```
 
 ```ruby
-buddhist_art_videos = KhanAcademy::Playlist.get_videos("buddhist-art")
-buddhist_art_videos.description
-buddhist_art_videos.title
-buddhist_art_videos.ka_url
+blood_vessels_videos = KhanAcademy::Playlist.get_videos("blood-vessels")
+blood_vessels_videos.description
+blood_vessels_videos.title
+blood_vessels_videos.ka_url
 ```
 
 More information about the Khan Academy API can be found at the [Khan Academy API Explorer](http://api-explorer.khanacademy.org/api/v1/).
