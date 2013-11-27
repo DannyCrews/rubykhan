@@ -4,11 +4,9 @@
 
 [![Gem Version](https://badge.fury.io/rb/rubykhan.png)](http://badge.fury.io/rb/rubykhan)
 
-[![Coverage Status](https://coveralls.io/repos/dannycrews/rubykhan/badge.png)](https://coveralls.io/r/dannycrews/rubykhan)
+[![Coverage Status](https://coveralls.io/repos/abigezunt/rubykhan/badge.png)](https://coveralls.io/r/abigezunt/rubykhan)
 
-[![Build Status](https://travis-ci.org/dannycrews/rubykhan.png?branch=master)](https://travis-ci.org/dannycrews/rubykhan)
-
-[![Code Climate](https://codeclimate.com/github/dannycrews/rubykhan.png)](https://codeclimate.com/github/dannycrews/rubykhan)
+[![Build Status](https://travis-ci.org/abigezunt/RubyKhan.png?branch=master)](https://travis-ci.org/abigezunt/RubyKhan)
 
 This is a wrapper for the [Khan Academy API](http://api-explorer.khanacademy.org/api/v1/).  It is a work in progress, and only supports part of the API.  Any assistance with implementing extra calls would be appreciated!
 
