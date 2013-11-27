@@ -3,8 +3,12 @@
   :total_violations: 65
   :violations:
     :line_style:
-    - :line: lib/rubykhan.rb:14
-      :description: Line contains trailing whitespace
+    - :line: lib/rubykhan.rb:6
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:7
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:8
+      :description: Line contains hard tabs
     - :line: lib/rubykhan.rb:14
       :description: Line contains hard tabs
     - :line: lib/rubykhan.rb:15
@@ -17,8 +21,6 @@
       :description: Line contains hard tabs
     - :line: lib/rubykhan.rb:17
       :description: Line contains hard tabs
-    - :line: lib/rubykhan.rb:18
-      :description: Line contains trailing whitespace
     - :line: lib/rubykhan.rb:18
       :description: Line contains hard tabs
     - :line: lib/rubykhan.rb:19
@@ -69,8 +71,6 @@
       :description: Line contains hard tabs
     - :line: lib/rubykhan.rb:47
       :description: Line contains hard tabs
-    - :line: lib/rubykhan.rb:48
-      :description: Line contains trailing whitespace
     - :line: lib/rubykhan.rb:48
       :description: Line contains hard tabs
     - :line: lib/rubykhan.rb:49
@@ -136,12 +136,35 @@
       :class_name: Playlist
 :churn:
   :changes:
+  - :file_path: lib/rubykhan.rb
+    :times_changed: 10
   - :file_path: spec/rubykhan_spec.rb
     :times_changed: 10
   :class_churn: []
   :method_churn: []
   :changed_files:
-  - spec/rubykhan_spec.rb
+  - lib/rubykhan.rb
+  - tmp/churn/3cdc4cd33d27962c2d3ae1c0136507198a01e97f.json
+  - tmp/metric_fu/_data/20131127.yml
+  - tmp/metric_fu/output/cane.html
+  - tmp/metric_fu/output/cane.js
+  - tmp/metric_fu/output/churn.html
+  - tmp/metric_fu/output/flay.html
+  - tmp/metric_fu/output/flay.js
+  - tmp/metric_fu/output/flog.html
+  - tmp/metric_fu/output/flog.js
+  - tmp/metric_fu/output/hotspots.html
+  - tmp/metric_fu/output/index.html
+  - tmp/metric_fu/output/lib_rubykhan.rb.html
+  - tmp/metric_fu/output/lib_rubykhan_version.rb.html
+  - tmp/metric_fu/output/reek.html
+  - tmp/metric_fu/output/reek.js
+  - tmp/metric_fu/output/roodi.html
+  - tmp/metric_fu/output/saikuro.html
+  - tmp/metric_fu/output/spec_rubykhan_spec.rb.html
+  - tmp/metric_fu/output/stats.html
+  - tmp/metric_fu/output/stats.js
+  - tmp/metric_fu/report.yml
   :changed_classes: []
   :changed_methods: []
 :flay:
@@ -559,6 +582,7 @@
       line_number: 
       hash_key: '["lib/rubykhan.rb", nil, nil]'
     details:
+      churn: detected high level of churn (changed 10 times)
       flay: found 2 code duplications
       reek: found 6 code smells
       saikuro: average complexity is 1.7

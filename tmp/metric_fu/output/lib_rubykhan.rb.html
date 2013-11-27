@@ -57,15 +57,15 @@
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n6" name="n6">6</a></span>  <span class="keyword">return</span> [] <span class="keyword">unless</span> hsh.kind_of? <span class="constant">Hash</span>
+  <div class="code"><pre><span class="line-numbers"><a href="#n6" name="n6">6</a></span>        <span class="keyword">return</span> [] <span class="keyword">unless</span> hsh.kind_of? <span class="constant">Hash</span>
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n7" name="n7">7</a></span>  v = hsh[key] ? [hsh[key]] : []
+  <div class="code"><pre><span class="line-numbers"><a href="#n7" name="n7">7</a></span>        v = hsh[key] ? [hsh[key]] : []
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n8" name="n8">8</a></span>  <span class="keyword">return</span> v
+  <div class="code"><pre><span class="line-numbers"><a href="#n8" name="n8">8</a></span>        <span class="keyword">return</span> v
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
@@ -89,7 +89,7 @@
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n14" name="n14">14</a></span>        <span class="keyword">class</span> <span class="class">Topic</span> 
+  <div class="code"><pre><span class="line-numbers"><a href="#n14" name="n14">14</a></span>        <span class="keyword">class</span> <span class="class">Topic</span>
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
@@ -105,15 +105,15 @@
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n18" name="n18">18</a></span>                        options.each <span class="keyword">do</span> |key, value| 
+  <div class="code"><pre><span class="line-numbers"><a href="#n18" name="n18">18</a></span>                        options.each <span class="keyword">do</span> |key, value|
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n19" name="n19">19</a></span>                    <span class="keyword">unless</span> key.to_s.empty?
+  <div class="code"><pre><span class="line-numbers"><a href="#n19" name="n19">19</a></span>                                <span class="keyword">unless</span> key.to_s.empty?
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>                                  eval(<span class="string"><span class="delimiter">&quot;</span><span class="content">@</span><span class="inline"><span class="inline-delimiter">#{</span>key<span class="inline-delimiter">}</span></span><span class="content">=</span><span class="inline"><span class="inline-delimiter">#{</span>value.inspect<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>)
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>                                        eval(<span class="string"><span class="delimiter">&quot;</span><span class="content">@</span><span class="inline"><span class="inline-delimiter">#{</span>key<span class="inline-delimiter">}</span></span><span class="content">=</span><span class="inline"><span class="inline-delimiter">#{</span>value.inspect<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>)
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
@@ -121,7 +121,7 @@
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n22" name="n22">22</a></span>                  <span class="keyword">end</span>
+  <div class="code"><pre><span class="line-numbers"><a href="#n22" name="n22">22</a></span>                        <span class="keyword">end</span>
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
@@ -225,15 +225,15 @@
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n48" name="n48">48</a></span>                        options.each <span class="keyword">do</span> |key, value| 
+  <div class="code"><pre><span class="line-numbers"><a href="#n48" name="n48">48</a></span>                        options.each <span class="keyword">do</span> |key, value|
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n49" name="n49">49</a></span>                    <span class="keyword">unless</span> key.to_s.empty?
+  <div class="code"><pre><span class="line-numbers"><a href="#n49" name="n49">49</a></span>                                <span class="keyword">unless</span> key.to_s.empty?
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><strong><a href="#n50" name="n50">50</a></strong></span>                                  eval(<span class="string"><span class="delimiter">&quot;</span><span class="content">@</span><span class="inline"><span class="inline-delimiter">#{</span>key<span class="inline-delimiter">}</span></span><span class="content">=</span><span class="inline"><span class="inline-delimiter">#{</span>value.inspect<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>)
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n50" name="n50">50</a></strong></span>                                        eval(<span class="string"><span class="delimiter">&quot;</span><span class="content">@</span><span class="inline"><span class="inline-delimiter">#{</span>key<span class="inline-delimiter">}</span></span><span class="content">=</span><span class="inline"><span class="inline-delimiter">#{</span>value.inspect<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>)
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
@@ -241,7 +241,7 @@
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n52" name="n52">52</a></span>                  <span class="keyword">end</span>
+  <div class="code"><pre><span class="line-numbers"><a href="#n52" name="n52">52</a></span>                        <span class="keyword">end</span>
 </pre></div>
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
