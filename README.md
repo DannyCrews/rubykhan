@@ -4,7 +4,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/rubykhan.png)](http://badge.fury.io/rb/rubykhan)
 
-[![Coverage Status](https://coveralls.io/repos/abigezunt/rubykhan/badge.png)](https://coveralls.io/r/abigezunt/rubykhan)
+[![Coverage Status](https://coveralls.io/repos/abigezunt/RubyKhan/badge.png)](https://coveralls.io/r/abigezunt/RubyKhan)
 
 [![Build Status](https://travis-ci.org/abigezunt/RubyKhan.png?branch=master)](https://travis-ci.org/abigezunt/RubyKhan)
 
