@@ -12,6 +12,6 @@ end
 group :test do
   gem 'webmock'
   gem 'simplecov'
-  gem 'coveralls'
+  gem 'coveralls', require: false
   gem 'rspec'
 end

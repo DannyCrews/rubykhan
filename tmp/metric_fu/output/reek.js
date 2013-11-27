@@ -8,9 +8,8 @@
         g.title = 'Reek: code smells';
         g.data('IrresponsibleModule', [2]);
 g.data('DuplicateMethodCall', [1]);
-g.data('NestedIterators', [1]);
-g.data('TooManyStatements', [1]);
-g.data('UncommunicativeVariableName', [2]);
+g.data('UtilityFunction', [1]);
+g.data('UncommunicativeVariableName', [1]);
 g.data('FeatureEnvy', [1]);
         g.labels = {"0":"11/27"};
         g.draw();

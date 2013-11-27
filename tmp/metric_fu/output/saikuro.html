@@ -500,7 +500,7 @@ table td.score {
   </head>
   <body>
     <div id='header'>
-      <h1><a href="/">metrics</a> | <a href="index.html">rubykhan</a></h1>
+      <h1><a href="/">metrics</a> | <a href="index.html">khan_academy_gem</a></h1>
       <address class='watermark'>
         built with
         <a href='http://metric-fu.rubyforge.org/'>metric-fu</a>
@@ -520,8 +520,8 @@ table td.score {
     
     <tr>
       <td>#values</td>
-      <td>7</td>
-      <td>11</td>
+      <td>3</td>
+      <td>4</td>
     </tr>
     
     <tr>
@@ -537,8 +537,14 @@ table td.score {
     </tr>
     
     <tr>
-      <td>KhanAcademy::Topic#self.all</td>
-      <td>1</td>
+      <td>KhanAcademy::Playlist#self.get_videos</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    
+    <tr>
+      <td>KhanAcademy::Playlist#self.get_exercises</td>
+      <td>2</td>
       <td>4</td>
     </tr>
     
@@ -549,15 +555,15 @@ table td.score {
     </tr>
     
     <tr>
-      <td>KhanAcademy::Playlist#self.get_exercises</td>
+      <td>KhanAcademy::Topic#self.all</td>
       <td>1</td>
       <td>4</td>
     </tr>
     
     <tr>
-      <td>KhanAcademy::Playlist#self.get_videos</td>
+      <td>KhanAcademy::Topic#self.tree</td>
       <td>1</td>
-      <td>4</td>
+      <td>3</td>
     </tr>
     
   </table>
@@ -573,27 +579,21 @@ table td.score {
     </tr>
     
     <tr>
-      <td></td>
-      <td>7</td>
-      <td>11</td>
-    </tr>
-    
-    <tr>
       <td>KhanAcademy::Playlist</td>
-      <td>5</td>
+      <td>7</td>
       <td>23</td>
     </tr>
     
     <tr>
       <td>KhanAcademy::Topic</td>
-      <td>5</td>
-      <td>23</td>
+      <td>6</td>
+      <td>28</td>
     </tr>
     
     <tr>
       <td></td>
-      <td>0</td>
-      <td>1</td>
+      <td>3</td>
+      <td>4</td>
     </tr>
     
     <tr>
@@ -617,8 +617,8 @@ table td.score {
       
         <h3>lib/rubykhan.rb</h3>
         <h4>Class : </h4>
-        <h5>Total complexity : 7</h5>
-        <h5>Total lines : 11</h5>
+        <h5>Total complexity : 3</h5>
+        <h5>Total lines : 4</h5>
         <table>
             <tr>
               <th>Method</th>
@@ -631,10 +631,10 @@ table td.score {
                 #values
               </td>
               <td>
-                7
+                3
               </td>
               <td>
-                11
+                4
               </td>
             </tr>
           
@@ -646,8 +646,8 @@ table td.score {
       
         <h3>lib/rubykhan.rb</h3>
         <h4>Class : KhanAcademy::Topic</h4>
-        <h5>Total complexity : 5</h5>
-        <h5>Total lines : 23</h5>
+        <h5>Total complexity : 6</h5>
+        <h5>Total lines : 28</h5>
         <table>
             <tr>
               <th>Method</th>
@@ -669,6 +669,18 @@ table td.score {
           
             <tr>
               <td>
+                KhanAcademy::Topic#self.all
+              </td>
+              <td>
+                1
+              </td>
+              <td>
+                4
+              </td>
+            </tr>
+          
+            <tr>
+              <td>
                 KhanAcademy::Topic#self.get_info
               </td>
               <td>
@@ -681,13 +693,13 @@ table td.score {
           
             <tr>
               <td>
-                KhanAcademy::Topic#self.all
+                KhanAcademy::Topic#self.tree
               </td>
               <td>
                 1
               </td>
               <td>
-                4
+                3
               </td>
             </tr>
           
@@ -697,7 +709,7 @@ table td.score {
       
         <h3>lib/rubykhan.rb</h3>
         <h4>Class : KhanAcademy::Playlist</h4>
-        <h5>Total complexity : 5</h5>
+        <h5>Total complexity : 7</h5>
         <h5>Total lines : 23</h5>
         <table>
             <tr>
@@ -723,7 +735,7 @@ table td.score {
                 KhanAcademy::Playlist#self.get_exercises
               </td>
               <td>
-                1
+                2
               </td>
               <td>
                 4
@@ -735,7 +747,7 @@ table td.score {
                 KhanAcademy::Playlist#self.get_videos
               </td>
               <td>
-                1
+                2
               </td>
               <td>
                 4
@@ -750,12 +762,8 @@ table td.score {
       
   
 
-  
-      
-  
 
-
-<p>Generated on 2013-11-27 09:57:39 -0500</p>
+<p>Generated on 2013-11-27 11:08:32 -0500</p>
 
     </div>
   </body>
