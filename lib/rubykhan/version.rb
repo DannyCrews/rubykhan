@@ -1,3 +1,3 @@
-module GaExampleGem
-  VERSION = "0.0.1"
+module Rubykhan
+  VERSION = "0.0.8"
 end

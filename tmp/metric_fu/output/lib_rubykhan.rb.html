@@ -37,6 +37,7 @@
           
         </style></head><body>
 <table cellpadding='0' cellspacing='0' class='ruby'><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+<<<<<<< HEAD
   <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>
 </pre></div>
 </div>
@@ -342,6 +343,289 @@
 </div>
 </td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
   <div class="code"><pre><span class="line-numbers"><a href="#n77" name="n77">77</a></span>
+=======
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>require <span class="string"><span class="delimiter">'</span><span class="content">httparty</span><span class="delimiter">'</span></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n2" name="n2">2</a></span>require <span class="string"><span class="delimiter">'</span><span class="content">json</span><span class="delimiter">'</span></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n3" name="n3">3</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n4" name="n4">4</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'><ul><li>Score of 21.97 &raquo; flog</li></ul></td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n5" name="n5">5</a></span><span class="keyword">def</span> <span class="function">values</span>(hsh, key)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n6" name="n6">6</a></span>  <span class="keyword">return</span> [] <span class="keyword">if</span> !hsh.kind_of? <span class="constant">Hash</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n7" name="n7">7</a></span>  v = hsh[key] ? [hsh[key]] : []
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n8" name="n8">8</a></span>  hsh.values.select{|i| i.kind_of? <span class="constant">Hash</span> <span class="keyword">or</span> i.kind_of? <span class="constant">Array</span>}.each <span class="keyword">do</span> |val|
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"> <a href="#n9" name="n9">9</a></span>    <span class="keyword">if</span> val.kind_of? <span class="constant">Hash</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n10" name="n10">10</a></strong></span>      v+= values(val, key)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n11" name="n11">11</a></span>    <span class="keyword">else</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n12" name="n12">12</a></span>      val.each {|i| v+= values(i, key)}
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n13" name="n13">13</a></span>    <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n14" name="n14">14</a></span>  <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n15" name="n15">15</a></span>  <span class="keyword">return</span> v
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n16" name="n16">16</a></span><span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n17" name="n17">17</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n18" name="n18">18</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n19" name="n19">19</a></span><span class="keyword">module</span> <span class="class">KhanAcademy</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n21" name="n21">21</a></span>        <span class="keyword">class</span> <span class="class">Topic</span> 
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n22" name="n22">22</a></span>                attr_reader <span class="symbol">:icon_src</span>, <span class="symbol">:domain_slug</span>, <span class="symbol">:relative_url</span>, <span class="symbol">:web_url</span>, <span class="symbol">:ka_url</span>, <span class="symbol">:translated_standalone_title</span>, <span class="symbol">:translated_title</span>, <span class="symbol">:gplus_url</span>, <span class="symbol">:id</span>, <span class="symbol">:old_key_name</span>, <span class="symbol">:hide</span>, <span class="symbol">:title</span>, <span class="symbol">:child_data</span>, <span class="symbol">:children</span>, <span class="symbol">:twitter_url</span>, <span class="symbol">:translated_description</span>, <span class="symbol">:deleted_mod_time</span>, <span class="symbol">:logo_image_url</span>, <span class="symbol">:in_knowledge_map</span>, <span class="symbol">:description</span>, <span class="symbol">:x_pos</span>, <span class="symbol">:node_slug</span>, <span class="symbol">:deleted</span>, <span class="symbol">:facebook_url</span>, <span class="symbol">:backup_timestamp</span>, <span class="symbol">:render_type</span>, <span class="symbol">:background_image_url</span>, <span class="symbol">:background_image_caption</span>, <span class="symbol">:assessment_progress_key</span>, <span class="symbol">:topic_page_url</span>, <span class="symbol">:extended_slug</span>, <span class="symbol">:slug</span>, <span class="symbol">:tags</span>, <span class="symbol">:kind</span>, <span class="symbol">:in_topic_browser</span>, <span class="symbol">:sha</span>, <span class="symbol">:standalone_title</span>, <span class="symbol">:y_pos</span>, <span class="symbol">:current_revision_key</span>, <span class="symbol">:content_kind</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n23" name="n23">23</a></span>                
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'><ul><li>Score of 11.92 &raquo; flog</li></ul></td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n24" name="n24">24</a></span>                <span class="keyword">def</span> <span class="function">initialize</span>(options)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n25" name="n25">25</a></span>                        options.each <span class="keyword">do</span> |key, value| 
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n26" name="n26">26</a></span>                    <span class="keyword">unless</span> key.to_s.empty?
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n27" name="n27">27</a></span>                                  eval(<span class="string"><span class="delimiter">&quot;</span><span class="content">@</span><span class="inline"><span class="inline-delimiter">#{</span>key<span class="inline-delimiter">}</span></span><span class="content">=</span><span class="inline"><span class="inline-delimiter">#{</span>value.inspect<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n28" name="n28">28</a></span>                                <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n29" name="n29">29</a></span>                  <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n30" name="n30">30</a></strong></span>                <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n31" name="n31">31</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'><ul><li>Score of 3.11 &raquo; flog</li></ul></td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n32" name="n32">32</a></span>                <span class="keyword">def</span> <span class="predefined-constant">self</span>.<span class="function">get_info</span>(topic)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n33" name="n33">33</a></span>                        uri = <span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.KhanAcademy.org/api/v1/topic/</span><span class="inline"><span class="inline-delimiter">#{</span>topic<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n34" name="n34">34</a></span>                        options = <span class="constant">HTTParty</span>.get(uri)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n35" name="n35">35</a></span>                        new(options)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n36" name="n36">36</a></span>                <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n37" name="n37">37</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'><ul><li>Score of 4.13 &raquo; flog</li></ul></td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n38" name="n38">38</a></span>                <span class="keyword">def</span> <span class="predefined-constant">self</span>.<span class="function">all</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n39" name="n39">39</a></span>                        uri = <span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.khanacademy.org/api/v1/topictree</span><span class="delimiter">&quot;</span></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n40" name="n40">40</a></strong></span>                        options = <span class="constant">HTTParty</span>.get(uri).to_hash
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n41" name="n41">41</a></span>                        values(options, <span class="string"><span class="delimiter">'</span><span class="content">slug</span><span class="delimiter">'</span></span>)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n42" name="n42">42</a></span>                <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n43" name="n43">43</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n44" name="n44">44</a></span>        <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n45" name="n45">45</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n46" name="n46">46</a></span>        <span class="keyword">class</span> <span class="class">Playlist</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n47" name="n47">47</a></span>                attr_reader <span class="symbol">:translated_short_display_name</span>, <span class="symbol">:assessment_items</span>, <span class="symbol">:relative_url</span>, <span class="symbol">:file_name</span>, <span class="symbol">:author_name</span>, <span class="symbol">:creation_date</span>, <span class="symbol">:uses_assessment_items</span>, <span class="symbol">:all_assessment_item_keys</span>, <span class="symbol">:ka_url</span>, <span class="symbol">:v_position</span>, <span class="symbol">:translated_title</span>, <span class="symbol">:translated_description_html</span>, <span class="symbol">:display_name</span>, <span class="symbol">:tracking_document_url</span>, <span class="symbol">:tags</span>, <span class="symbol">:summative</span>, <span class="symbol">:live</span>, <span class="symbol">:pretty_display_name</span>, <span class="symbol">:translated_pretty_display_name</span>, <span class="symbol">:problem_types</span>, <span class="symbol">:curated_related_videos</span>, <span class="symbol">:covers</span>, <span class="symbol">:h_position</span>, <span class="symbol">:translated_display_name</span>, <span class="symbol">:sha1</span>, <span class="symbol">:name</span>, <span class="symbol">:prerequisites</span>, <span class="symbol">:assessment_item_tags</span>, <span class="symbol">:seconds_per_fast_problem</span>, <span class="symbol">:short_display_name</span>, <span class="symbol">:tutorial_only</span>, <span class="symbol">:current_revision_key</span>, <span class="symbol">:image_url_256</span>, <span class="symbol">:content_ki</span>, <span class="symbol">:translated_youtube_id</span>, <span class="symbol">:has_questions</span>, <span class="symbol">:keywords</span>, <span class="symbol">:duration</span>, <span class="symbol">:id</span>, <span class="symbol">:description_html</span>, <span class="symbol">:title</span>, <span class="symbol">:progress_key</span>, <span class="symbol">:edit_slug</span>, <span class="symbol">:author_names</span>, <span class="symbol">:deleted_mod_time</span>, <span class="symbol">:description</span>, <span class="symbol">:extra_properties</span>, <span class="symbol">:node_slug</span>, <span class="symbol">:deleted</span>, <span class="symbol">:backup_timestamp</span>, <span class="symbol">:date_added</span>, <span class="symbol">:download_urls</span>, <span class="symbol">:translated_youtube_lang</span>, <span class="symbol">:kind</span>, <span class="symbol">:url</span>, <span class="symbol">:ka_user_license</span>, <span class="symbol">:global_id</span>, <span class="symbol">:sha</span>, <span class="symbol">:translated_description</span>, <span class="symbol">:image_url</span>, <span class="symbol">:youtube_id</span>, <span class="symbol">:position</span>, <span class="symbol">:content_kind</span>, <span class="symbol">:readable_id</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n48" name="n48">48</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'><ul><li>Score of 11.92 &raquo; flog</li></ul></td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n49" name="n49">49</a></span>                <span class="keyword">def</span> <span class="function">initialize</span>(options)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n50" name="n50">50</a></strong></span>                        options.each <span class="keyword">do</span> |key, value| 
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n51" name="n51">51</a></span>                    <span class="keyword">unless</span> key.to_s.empty?
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n52" name="n52">52</a></span>                                  eval(<span class="string"><span class="delimiter">&quot;</span><span class="content">@</span><span class="inline"><span class="inline-delimiter">#{</span>key<span class="inline-delimiter">}</span></span><span class="content">=</span><span class="inline"><span class="inline-delimiter">#{</span>value.inspect<span class="inline-delimiter">}</span></span><span class="delimiter">&quot;</span></span>)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n53" name="n53">53</a></span>                                <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n54" name="n54">54</a></span>                  <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n55" name="n55">55</a></span>                <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n56" name="n56">56</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'><ul><li>Score of 4.13 &raquo; flog</li></ul></td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n57" name="n57">57</a></span>                <span class="keyword">def</span> <span class="predefined-constant">self</span>.<span class="function">get_exercises</span>(topic)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n58" name="n58">58</a></span>                        uri = <span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.KhanAcademy.org/api/v1/playlists/</span><span class="inline"><span class="inline-delimiter">#{</span>topic<span class="inline-delimiter">}</span></span><span class="content">/exercises</span><span class="delimiter">&quot;</span></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n59" name="n59">59</a></span>                        options = <span class="constant">HTTParty</span>.get(uri)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n60" name="n60">60</a></strong></span>                        new(options.first)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n61" name="n61">61</a></span>                <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n62" name="n62">62</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'><ul><li>Score of 4.13 &raquo; flog</li></ul></td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n63" name="n63">63</a></span>                <span class="keyword">def</span> <span class="predefined-constant">self</span>.<span class="function">get_videos</span>(topic)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n64" name="n64">64</a></span>                        uri = <span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.KhanAcademy.org/api/v1/playlists/</span><span class="inline"><span class="inline-delimiter">#{</span>topic<span class="inline-delimiter">}</span></span><span class="content">/videos</span><span class="delimiter">&quot;</span></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n65" name="n65">65</a></span>                        options = <span class="constant">HTTParty</span>.get(uri)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n66" name="n66">66</a></span>                        new(options.first)
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n67" name="n67">67</a></span>                <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n68" name="n68">68</a></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n69" name="n69">69</a></span>        <span class="keyword">end</span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n70" name="n70">70</a></strong></span>
+</pre></div>
+</div>
+</td></tr><tr><td valign='top'>&nbsp;</td><td valign='top'><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n71" name="n71">71</a></span><span class="keyword">end</span>
+>>>>>>> 626cf7431892fcbe75bbcf30e639f157502c7696
 </pre></div>
 </div>
 </td></tr><table></body></html>
