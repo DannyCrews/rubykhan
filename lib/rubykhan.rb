@@ -76,6 +76,3 @@ module KhanAcademy
 	end
 
 end
-
-
-
