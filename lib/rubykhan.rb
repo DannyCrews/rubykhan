@@ -66,7 +66,7 @@ module KhanAcademy
 		def self.get_exercises(topic)
 			uri = "http://www.KhanAcademy.org/api/v1/playlists/#{topic}/exercises"
 			options = KhanAcademy::Playlist.get(uri)
-			options.collect {|json| new(json)}
+			# options.collect {|json| new(json)}
 		end
 
 		def self.get_videos(topic)
