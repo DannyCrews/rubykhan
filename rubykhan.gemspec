@@ -23,4 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'hashie', '~> 2.0'
   spec.add_dependency 'json', '~> 1.8'
   spec.add_dependency 'rash', '~> 0.4'
+  spec.add_dependency 'httparty'
 end
