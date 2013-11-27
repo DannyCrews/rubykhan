@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["abbyghowell@gmail.com", "dancrews@me.com"]
   spec.description   = %q{A Ruby wrapper for the Khan Academy API}
   spec.summary       = %q{Simplififies API requests}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/DannyCrews/rubykhan"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
