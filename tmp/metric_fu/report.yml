@@ -1,0 +1,898 @@
+---
+:cane:
+  :total_violations: 134
+  :violations:
+    :line_style:
+    - :line: lib/rubykhan.rb:21
+      :description: Line contains trailing whitespace
+    - :line: lib/rubykhan.rb:21
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:22
+      :description: Line is >80 characters (597)
+    - :line: lib/rubykhan.rb:22
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:23
+      :description: Line contains trailing whitespace
+    - :line: lib/rubykhan.rb:23
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:24
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:25
+      :description: Line contains trailing whitespace
+    - :line: lib/rubykhan.rb:25
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:26
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:27
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:28
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:29
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:30
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:32
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:33
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:34
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:35
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:36
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:38
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:39
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:40
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:41
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:42
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:44
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:46
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:47
+      :description: Line is >80 characters (1043)
+    - :line: lib/rubykhan.rb:47
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:49
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:50
+      :description: Line contains trailing whitespace
+    - :line: lib/rubykhan.rb:50
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:51
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:52
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:53
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:54
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:55
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:57
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:58
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:59
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:60
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:61
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:63
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:64
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:65
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:66
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:67
+      :description: Line contains hard tabs
+    - :line: lib/rubykhan.rb:69
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:2
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:3
+      :description: Line is >80 characters (115)
+    - :line: lib/topics.rb:3
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:4
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:5
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:6
+      :description: Line is >80 characters (83)
+    - :line: lib/topics.rb:6
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:7
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:8
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:9
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:10
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:11
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:12
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:13
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:14
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:15
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:16
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:17
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:18
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:19
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:20
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:21
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:22
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:23
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:24
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:25
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:26
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:27
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:28
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:30
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:32
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:34
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:36
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:37
+      :description: Line contains trailing whitespace
+    - :line: lib/topics.rb:37
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:38
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:42
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:44
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:45
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:46
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:47
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:48
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:49
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:50
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:51
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:53
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:54
+      :description: Line is >80 characters (110)
+    - :line: lib/topics.rb:54
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:55
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:56
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:57
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:58
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:59
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:60
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:61
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:62
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:63
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:64
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:65
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:66
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:68
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:71
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:72
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:73
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:74
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:75
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:76
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:77
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:78
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:79
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:80
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:81
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:85
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:86
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:87
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:88
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:89
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:90
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:91
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:92
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:93
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:94
+      :description: Line contains hard tabs
+    - :line: lib/topics.rb:95
+      :description: Line contains hard tabs
+    - :line: spec/rubykhan_spec.rb:23
+      :description: Line is >80 characters (94)
+    - :line: spec/rubykhan_spec.rb:37
+      :description: Line is >80 characters (102)
+    :comment:
+    - :line: lib/rubykhan.rb:21
+      :class_name: Topic
+    - :line: lib/rubykhan.rb:46
+      :class_name: Playlist
+:churn:
+  :changes: []
+  :class_churn: []
+  :method_churn: []
+  :changed_files:
+  - lib/rubykhan/version.rb
+  - rubykhan.gemspec
+  :changed_classes: []
+  :changed_methods: []
+:flay:
+  :total_score: '72'
+  :matches:
+  - :reason: 1) IDENTICAL code found in :defn (mass*2 = 72)
+    :matches:
+    - :name: lib/rubykhan.rb
+      :line: '24'
+    - :name: lib/rubykhan.rb
+      :line: '49'
+:flog:
+  :total: 65.73157153796417
+  :average: 6.5731571537964175
+  :method_containers:
+  - :name: main
+    :path: lib/rubykhan.rb
+    :total_score: 24.170434679359445
+    :highest_score: 21.970434679359446
+    :average_score: 12.085217339679723
+    :methods:
+      main#values:
+        :operators:
+          :branch: 8.500000000000002
+          :kind_of?: 5.500000000000001
+          :!: 1.1
+          :assignment: 3.8000000000000007
+          :[]: 2.3000000000000003
+          :values: 4.6000000000000005
+          :select: 1.3
+          :each: 2.4000000000000004
+          :+: 2.7000000000000006
+        :score: 21.970434679359446
+        :path: lib/rubykhan.rb:5
+      main#none:
+        :operators:
+          :require: 2.2
+        :score: 2.2
+        :path: 
+  - :name: KhanAcademy::Playlist
+    :path: lib/rubykhan.rb
+    :total_score: 13.023925528113637
+    :highest_score: 11.923925528113637
+    :average_score: 6.511962764056818
+    :methods:
+      KhanAcademy::Playlist#initialize:
+        :operators:
+          :branch: 2.3000000000000003
+          :each: 1.1
+          :to_s: 1.4000000000000001
+          :empty?: 1.2000000000000002
+          :inspect: 1.5000000000000002
+          :eval: 6.500000000000002
+        :score: 11.923925528113637
+        :path: lib/rubykhan.rb:49
+      KhanAcademy::Playlist#none:
+        :operators:
+          :attr_reader: 1.1
+        :score: 1.1
+        :path: 
+  - :name: KhanAcademy::Topic
+    :path: lib/rubykhan.rb
+    :total_score: 13.023925528113637
+    :highest_score: 11.923925528113637
+    :average_score: 6.511962764056818
+    :methods:
+      KhanAcademy::Topic#initialize:
+        :operators:
+          :branch: 2.3000000000000003
+          :each: 1.1
+          :to_s: 1.4000000000000001
+          :empty?: 1.2000000000000002
+          :inspect: 1.5000000000000002
+          :eval: 6.500000000000002
+        :score: 11.923925528113637
+        :path: lib/rubykhan.rb:24
+      KhanAcademy::Topic#none:
+        :operators:
+          :attr_reader: 1.1
+        :score: 1.1
+        :path: 
+  - :name: KhanAcademy::Playlist::get_exercises
+    :path: lib/rubykhan.rb
+    :total_score: 4.134005321718878
+    :highest_score: 4.134005321718878
+    :average_score: 4.134005321718878
+    :methods:
+      KhanAcademy::Playlist::get_exercises:
+        :operators:
+          :assignment: 2.2
+          :get: 1.1
+          :first: 1.3
+          :new: 1.1
+        :score: 4.134005321718878
+        :path: lib/rubykhan.rb:57
+  - :name: KhanAcademy::Playlist::get_videos
+    :path: lib/rubykhan.rb
+    :total_score: 4.134005321718878
+    :highest_score: 4.134005321718878
+    :average_score: 4.134005321718878
+    :methods:
+      KhanAcademy::Playlist::get_videos:
+        :operators:
+          :assignment: 2.2
+          :get: 1.1
+          :first: 1.3
+          :new: 1.1
+        :score: 4.134005321718878
+        :path: lib/rubykhan.rb:63
+  - :name: KhanAcademy::Topic::all
+    :path: lib/rubykhan.rb
+    :total_score: 4.134005321718878
+    :highest_score: 4.134005321718878
+    :average_score: 4.134005321718878
+    :methods:
+      KhanAcademy::Topic::all:
+        :operators:
+          :assignment: 2.2
+          :get: 1.3
+          :to_hash: 1.1
+          :values: 1.1
+        :score: 4.134005321718878
+        :path: lib/rubykhan.rb:38
+  - :name: KhanAcademy::Topic::get_info
+    :path: lib/rubykhan.rb
+    :total_score: 3.111269837220809
+    :highest_score: 3.111269837220809
+    :average_score: 3.111269837220809
+    :methods:
+      KhanAcademy::Topic::get_info:
+        :operators:
+          :assignment: 2.2
+          :get: 1.1
+          :new: 1.1
+        :score: 3.111269837220809
+        :path: lib/rubykhan.rb:32
+:saikuro:
+  :files:
+  - :classes:
+    - :class_name: ''
+      :complexity: 7
+      :lines: 11
+      :methods:
+      - :name: '#values'
+        :complexity: 7
+        :lines: 11
+    - :class_name: KhanAcademy
+      :complexity: 0
+      :lines: 6
+      :methods: []
+    - :class_name: KhanAcademy::Topic
+      :complexity: 5
+      :lines: 23
+      :methods:
+      - :name: KhanAcademy::Topic#initialize
+        :complexity: 3
+        :lines: 6
+      - :name: KhanAcademy::Topic#self.get_info
+        :complexity: 1
+        :lines: 4
+      - :name: KhanAcademy::Topic#self.all
+        :complexity: 1
+        :lines: 4
+    - :class_name: KhanAcademy::Playlist
+      :complexity: 5
+      :lines: 23
+      :methods:
+      - :name: KhanAcademy::Playlist#initialize
+        :complexity: 3
+        :lines: 6
+      - :name: KhanAcademy::Playlist#self.get_exercises
+        :complexity: 1
+        :lines: 4
+      - :name: KhanAcademy::Playlist#self.get_videos
+        :complexity: 1
+        :lines: 4
+    :filename: lib/rubykhan.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: lib/topics.rb
+  - :classes:
+    - :class_name: Rubykhan
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: lib/rubykhan/version.rb
+  :classes:
+  - :name: ''
+    :complexity: 7
+    :lines: 11
+    :defs:
+    - :name: '#values'
+      :complexity: 7
+      :lines: 11
+  - :name: KhanAcademy::Playlist
+    :complexity: 5
+    :lines: 23
+    :defs:
+    - :name: KhanAcademy::Playlist#initialize
+      :complexity: 3
+      :lines: 6
+    - :name: KhanAcademy::Playlist#self.get_exercises
+      :complexity: 1
+      :lines: 4
+    - :name: KhanAcademy::Playlist#self.get_videos
+      :complexity: 1
+      :lines: 4
+  - :name: KhanAcademy::Topic
+    :complexity: 5
+    :lines: 23
+    :defs:
+    - :name: KhanAcademy::Topic#initialize
+      :complexity: 3
+      :lines: 6
+    - :name: KhanAcademy::Topic#self.get_info
+      :complexity: 1
+      :lines: 4
+    - :name: KhanAcademy::Topic#self.all
+      :complexity: 1
+      :lines: 4
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: KhanAcademy
+    :complexity: 0
+    :lines: 6
+  - :name: Rubykhan
+    :complexity: 0
+    :lines: 2
+  :methods:
+  - :name: '#values'
+    :complexity: 7
+    :lines: 11
+  - :name: KhanAcademy::Topic#initialize
+    :complexity: 3
+    :lines: 6
+  - :name: KhanAcademy::Playlist#initialize
+    :complexity: 3
+    :lines: 6
+  - :name: KhanAcademy::Topic#self.all
+    :complexity: 1
+    :lines: 4
+  - :name: KhanAcademy::Topic#self.get_info
+    :complexity: 1
+    :lines: 4
+  - :name: KhanAcademy::Playlist#self.get_exercises
+    :complexity: 1
+    :lines: 4
+  - :name: KhanAcademy::Playlist#self.get_videos
+    :complexity: 1
+    :lines: 4
+:reek:
+  :matches:
+  - :file_path: lib/rubykhan.rb
+    :code_smells:
+    - :method: KhanAcademy::Playlist
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: KhanAcademy::Topic
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: values
+      :message: calls hsh[key] twice
+      :type: DuplicateMethodCall
+    - :method: values
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: values
+      :message: has approx 6 statements
+      :type: TooManyStatements
+    - :method: values
+      :message: has the variable name 'i'
+      :type: UncommunicativeVariableName
+    - :method: values
+      :message: has the variable name 'v'
+      :type: UncommunicativeVariableName
+    - :method: values
+      :message: refers to hsh more than self
+      :type: FeatureEnvy
+  - :file_path: lib/rubykhan/version.rb
+    :code_smells: []
+  - :file_path: lib/topics.rb
+    :code_smells: []
+:roodi:
+  :total:
+  - "\e[32mFound 0 errors.\e[0m"
+  :problems:
+  - :file: Running Roodi checks
+    :line: 
+    :problem: 
+  - :file: Checked 3 files
+    :line: 
+    :problem: 
+:stats:
+  :codeLOC: 59
+  :testLOC: 64
+  :code_to_test_ratio: 1.1
+  :lines:
+  - :name: Libraries
+    :lines: 174
+    :loc: 59
+    :classes: 2
+    :methods: 7
+    :methods_per_class: 3
+    :loc_per_method: 6
+  - :name: Uncategorized specs
+    :lines: 79
+    :loc: 64
+    :classes: 0
+    :methods: 4
+    :methods_per_class: 0
+    :loc_per_method: 14
+  - :name: Total
+    :lines: 253
+    :loc: 123
+    :classes: 2
+    :methods: 11
+    :methods_per_class: 5
+    :loc_per_method: 9
+:hotspots:
+  files:
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rubykhan.rb:5
+      file_name: lib/rubykhan.rb
+      line_number: '5'
+      hash_key: '["lib/rubykhan.rb:5", nil, nil]'
+    details:
+      flog: complexity is 22.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rubykhan.rb:24
+      file_name: lib/rubykhan.rb
+      line_number: '24'
+      hash_key: '["lib/rubykhan.rb:24", nil, nil]'
+    details:
+      flog: complexity is 11.9
+      saikuro: complexity is 3.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rubykhan.rb:49
+      file_name: lib/rubykhan.rb
+      line_number: '49'
+      hash_key: '["lib/rubykhan.rb:49", nil, nil]'
+    details:
+      flog: complexity is 11.9
+      saikuro: complexity is 3.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rubykhan.rb:63
+      file_name: lib/rubykhan.rb
+      line_number: '63'
+      hash_key: '["lib/rubykhan.rb:63", nil, nil]'
+    details:
+      flog: complexity is 4.1
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rubykhan.rb:57
+      file_name: lib/rubykhan.rb
+      line_number: '57'
+      hash_key: '["lib/rubykhan.rb:57", nil, nil]'
+    details:
+      flog: complexity is 4.1
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rubykhan.rb:38
+      file_name: lib/rubykhan.rb
+      line_number: '38'
+      hash_key: '["lib/rubykhan.rb:38", nil, nil]'
+    details:
+      flog: complexity is 4.1
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rubykhan.rb:32
+      file_name: lib/rubykhan.rb
+      line_number: '32'
+      hash_key: '["lib/rubykhan.rb:32", nil, nil]'
+    details:
+      flog: complexity is 3.1
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rubykhan.rb
+      file_name: lib/rubykhan.rb
+      line_number: 
+      hash_key: '["lib/rubykhan.rb", nil, nil]'
+    details:
+      flay: found 1 code duplications
+      reek: found 8 code smells
+      saikuro: average complexity is 2.2
+  - location:
+      class_name: 
+      method_name: 
+      file_path: Running Roodi checks
+      file_name: Running Roodi checks
+      line_number: 
+      hash_key: '["Running Roodi checks", nil, nil]'
+    details:
+      roodi: found 1 design problems
+  - location:
+      class_name: 
+      method_name: 
+      file_path: Checked 3 files
+      file_name: Checked 3 files
+      line_number: 
+      hash_key: '["Checked 3 files", nil, nil]'
+    details:
+      roodi: found 1 design problems
+  classes:
+  - location:
+      class_name: main
+      method_name: 
+      file_path: lib/rubykhan.rb:5
+      file_name: lib/rubykhan.rb
+      line_number: '5'
+      hash_key: '["lib/rubykhan.rb:5", "main", nil]'
+    details:
+      flog: average complexity is 12.1
+  - location:
+      class_name: Topic
+      method_name: 
+      file_path: lib/rubykhan.rb:24
+      file_name: lib/rubykhan.rb
+      line_number: '24'
+      hash_key: '["lib/rubykhan.rb:24", "Topic", nil]'
+    details:
+      flog: average complexity is 6.5
+      reek: found 1 code smells
+      saikuro: average complexity is 1.7
+  - location:
+      class_name: Playlist
+      method_name: 
+      file_path: lib/rubykhan.rb:49
+      file_name: lib/rubykhan.rb
+      line_number: '49'
+      hash_key: '["lib/rubykhan.rb:49", "Playlist", nil]'
+    details:
+      flog: average complexity is 6.5
+      reek: found 1 code smells
+      saikuro: average complexity is 1.7
+  - location:
+      class_name: ''
+      method_name: 
+      file_path: lib/rubykhan.rb
+      file_name: lib/rubykhan.rb
+      line_number: 
+      hash_key: '["lib/rubykhan.rb", "", nil]'
+    details:
+      saikuro: complexity is 7.0
+  - location:
+      class_name: get_exercises
+      method_name: 
+      file_path: lib/rubykhan.rb:57
+      file_name: lib/rubykhan.rb
+      line_number: '57'
+      hash_key: '["lib/rubykhan.rb:57", "get_exercises", nil]'
+    details:
+      flog: complexity is 4.1
+  - location:
+      class_name: all
+      method_name: 
+      file_path: lib/rubykhan.rb:38
+      file_name: lib/rubykhan.rb
+      line_number: '38'
+      hash_key: '["lib/rubykhan.rb:38", "all", nil]'
+    details:
+      flog: complexity is 4.1
+  - location:
+      class_name: get_videos
+      method_name: 
+      file_path: lib/rubykhan.rb:63
+      file_name: lib/rubykhan.rb
+      line_number: '63'
+      hash_key: '["lib/rubykhan.rb:63", "get_videos", nil]'
+    details:
+      flog: complexity is 4.1
+  - location:
+      class_name: get_info
+      method_name: 
+      file_path: lib/rubykhan.rb:32
+      file_name: lib/rubykhan.rb
+      line_number: '32'
+      hash_key: '["lib/rubykhan.rb:32", "get_info", nil]'
+    details:
+      flog: complexity is 3.1
+  - location:
+      class_name: values
+      method_name: 
+      file_path: lib/rubykhan.rb
+      file_name: lib/rubykhan.rb
+      line_number: 
+      hash_key: '["lib/rubykhan.rb", "values", nil]'
+    details:
+      reek: found 6 code smells
+  methods:
+  - location:
+      class_name: main
+      method_name: main#values
+      file_path: lib/rubykhan.rb:5
+      file_name: lib/rubykhan.rb
+      line_number: '5'
+      hash_key: '["lib/rubykhan.rb:5", "main", "main#values"]'
+      simple_method_name: '#values'
+    details:
+      flog: complexity is 22.0
+  - location:
+      class_name: Topic
+      method_name: Topic#initialize
+      file_path: lib/rubykhan.rb:24
+      file_name: lib/rubykhan.rb
+      line_number: '24'
+      hash_key: '["lib/rubykhan.rb:24", "Topic", "Topic#initialize"]'
+      simple_method_name: '#initialize'
+    details:
+      flog: complexity is 11.9
+      saikuro: complexity is 3.0
+  - location:
+      class_name: Playlist
+      method_name: Playlist#initialize
+      file_path: lib/rubykhan.rb:49
+      file_name: lib/rubykhan.rb
+      line_number: '49'
+      hash_key: '["lib/rubykhan.rb:49", "Playlist", "Playlist#initialize"]'
+      simple_method_name: '#initialize'
+    details:
+      flog: complexity is 11.9
+      saikuro: complexity is 3.0
+  - location:
+      class_name: ''
+      method_name: '#values'
+      file_path: lib/rubykhan.rb
+      file_name: lib/rubykhan.rb
+      line_number: 
+      hash_key: '["lib/rubykhan.rb", "", "#values"]'
+      simple_method_name: '#values'
+    details:
+      saikuro: complexity is 7.0
+  - location:
+      class_name: main
+      method_name: main#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "main", "main#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 2.2
+  - location:
+      class_name: Playlist
+      method_name: Playlist#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "Playlist", "Playlist#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 1.1
+  - location:
+      class_name: Topic
+      method_name: Topic#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "Topic", "Topic#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 1.1
+  - location:
+      class_name: Topic
+      method_name: Topic#self.get_info
+      file_path: lib/rubykhan.rb
+      file_name: lib/rubykhan.rb
+      line_number: 
+      hash_key: '["lib/rubykhan.rb", "Topic", "Topic#self.get_info"]'
+      simple_method_name: '#self.get_info'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Topic
+      method_name: Topic#self.all
+      file_path: lib/rubykhan.rb
+      file_name: lib/rubykhan.rb
+      line_number: 
+      hash_key: '["lib/rubykhan.rb", "Topic", "Topic#self.all"]'
+      simple_method_name: '#self.all'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Playlist
+      method_name: Playlist#self.get_exercises
+      file_path: lib/rubykhan.rb
+      file_name: lib/rubykhan.rb
+      line_number: 
+      hash_key: '["lib/rubykhan.rb", "Playlist", "Playlist#self.get_exercises"]'
+      simple_method_name: '#self.get_exercises'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Playlist
+      method_name: Playlist#self.get_videos
+      file_path: lib/rubykhan.rb
+      file_name: lib/rubykhan.rb
+      line_number: 
+      hash_key: '["lib/rubykhan.rb", "Playlist", "Playlist#self.get_videos"]'
+      simple_method_name: '#self.get_videos'
+    details:
+      saikuro: complexity is 1.0

@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Dan Crews", "Abby Howell"]
   spec.email         = ["abbyghowell@gmail.com", "dancrews@me.com"]
   spec.description   = %q{A Ruby wrapper for the Khan Academy API}
-  spec.summary       = %q{Simplififies API requests}
+  spec.summary       = %q{Simplifies API requests with a Ruby application.}
   spec.homepage      = "https://github.com/DannyCrews/rubykhan"
   spec.license       = "MIT"
 
@@ -20,8 +20,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
-  spec.add_dependency 'hashie', '~> 2.0'
   spec.add_dependency 'json', '~> 1.8'
-  spec.add_dependency 'rash', '~> 0.4'
   spec.add_dependency 'httparty'
 end
