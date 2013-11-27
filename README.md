@@ -67,10 +67,10 @@ algebra.description
 algebra.ka_url
 ```
 
-More specific topics (e.g. "differential-equations", "buddhist-art", "blood-vessels") can return videos and exercises.
+More specific topics (e.g. "differential-equations", "buddhist-art", "blood-vessels") can return videos and exercises. 
 
 ```ruby
-buddhist_art = KhanAcademy::Playlist.get_exercises("buddhist-art")
+buddhist_art = KhanAcademy::Topic.get_exercises("buddhist-art")
 buddhist_art.image_url
 buddhist_art.prerequisites
 buddhist_art.title
@@ -78,7 +78,7 @@ buddhist_art.tutorial_only
 ```
 
 ```ruby
-blood_vessels_videos = KhanAcademy::Playlist.get_videos("blood-vessels")
+blood_vessels_videos = KhanAcademy::Topic.get_videos("blood-vessels")
 blood_vessels_videos.description
 blood_vessels_videos.title
 blood_vessels_videos.ka_url

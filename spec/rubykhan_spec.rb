@@ -5,13 +5,13 @@ describe 'RubyKhan' do
 	describe '.new' do
     
     before do
-      stub_request(:get, 'http://www.KhanAcademy.org/api/v1/topic/probability').
+      stub_request(:get, 'http://www.KhanAcademy.org/api/v1/topics/probability').
       to_return(body: fixture('probability.json'))
       @probability = KhanAcademy::Topic.get_info('probability')
     end
 
     it "makes an API request" do
-      expect(a_request(:get, 'http://www.KhanAcademy.org/api/v1/topic/probability')).to have_been_made
+      expect(a_request(:get, 'http://www.KhanAcademy.org/api/v1/topics/probability')).to have_been_made
     end
 
     it "returns a KhanAcademy::Topic" do
@@ -54,20 +54,20 @@ describe 'RubyKhan' do
 
   end
 
-  describe "KhanAcademy::Playlist.get_videos" do
+  describe "KhanAcademy::Topic.get_videos" do
     before do
-      stub_request(:get, "http://www.KhanAcademy.org/api/v1/playlists/blood-vessels/videos").
+      stub_request(:get, "http://www.KhanAcademy.org/api/v1/topics/blood-vessels/videos").
       to_return(body: fixture('videos.json'))
-      @blood_vessels = KhanAcademy::Playlist.get_videos('blood-vessels')
+      @blood_vessels = KhanAcademy::Topic.get_videos('blood-vessels')
     end
 
     it "instantiates an array of playlist objects" do
       expect(@blood_vessels).to be_a Array
-      expect(@blood_vessels.first).to be_a KhanAcademy::Playlist
+      expect(@blood_vessels.first).to be_a KhanAcademy::Topic
     end
 
     it "makes an api call" do
-      expect(a_request(:get, 'http://www.KhanAcademy.org/api/v1/playlists/blood-vessels/videos')).to have_been_made
+      expect(a_request(:get, 'http://www.KhanAcademy.org/api/v1/topics/blood-vessels/videos')).to have_been_made
     end
 
     it "returns an object whose attributes can be accessed with ruby methods" do
@@ -75,16 +75,16 @@ describe 'RubyKhan' do
     end
   end
 
-  describe "KhanAcademy::Playlist.get_exercises" do
+  describe "KhanAcademy::Topic.get_exercises" do
     before do
       stub_request(:get, "http://www.KhanAcademy.org/api/v1/playlists/buddhist-art/exercises").
       to_return(body: fixture('exercises.json'))
-      @buddhist_art = KhanAcademy::Playlist.get_exercises('buddhist-art')
+      @buddhist_art = KhanAcademy::Topic.get_exercises('buddhist-art')
     end
 
     it "instantiates an array of playlist objects" do
       expect(@buddhist_art).to be_a Array
-      expect(@buddhist_art.first).to be_a KhanAcademy::Playlist
+      expect(@buddhist_art.first).to be_a KhanAcademy::Topic
     end
 
     it "makes an api call" do
