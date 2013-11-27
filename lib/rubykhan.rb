@@ -33,7 +33,7 @@ module KhanAcademy
 
 		def self.get_info(topic)
 			uri = "http://www.KhanAcademy.org/api/v1/topic/#{topic}"
-			options = HTTParty.get(uri)
+			options = JSON.parse HTTParty.get(uri)
 			new(options)
 		end
 
@@ -41,6 +41,11 @@ module KhanAcademy
 			uri = "http://www.khanacademy.org/api/v1/topictree"
 			options = HTTParty.get(uri).to_hash
 			values(options, key)
+		end
+
+		def self.tree
+			uri = "http://www.khanacademy.org/api/v1/topictree"
+			topictree = JSON.parse HTTParty.get(uri)
 		end
 
 	end
@@ -58,13 +63,13 @@ module KhanAcademy
 
 		def self.get_exercises(topic)
 			uri = "http://www.KhanAcademy.org/api/v1/playlists/#{topic}/exercises"
-			options = HTTParty.get(uri).to_a
+			options = JSON.parse HTTParty.get(uri)
 			options.collect {|json| new(json)}
 		end
 
 		def self.get_videos(topic)
 			uri = "http://www.KhanAcademy.org/api/v1/playlists/#{topic}/videos"
-			options = HTTParty.get(uri).to_a
+			options = JSON.parse HTTParty.get(uri)
 			options.collect {|json| new(json)}
 		end
 

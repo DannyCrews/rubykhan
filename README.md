@@ -85,6 +85,12 @@ blood_vessels_videos.title
 blood_vessels_videos.ka_url
 ```
 
+To see the entire (huge) Topic Tree from Khan academy, use the Topic.tree method:
+
+```ruby
+KhanAcademy::Topic.tree
+```
+
 More information about the Khan Academy API can be found at the [Khan Academy API Explorer](http://api-explorer.khanacademy.org/api/v1/).
 
 ## Contributing
