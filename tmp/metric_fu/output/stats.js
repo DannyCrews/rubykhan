@@ -6,12 +6,7 @@
       g.marker_font_size = "10px"
 
         g.title = 'Stats: LOC & LOT';
-<<<<<<< HEAD
-        g.data('LOC', [61]);
-g.data('LOT', [48]);
-=======
-        g.data('LOC', [59]);
-g.data('LOT', [64]);
->>>>>>> 626cf7431892fcbe75bbcf30e639f157502c7696
+        g.data('LOC', [56]);
+g.data('LOT', [106]);
         g.labels = {"0":"11/27"};
         g.draw();

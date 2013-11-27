@@ -6,10 +6,6 @@
       g.marker_font_size = "10px"
 
         g.title = 'Cane: code quality threshold violations';
-<<<<<<< HEAD
-        g.data('cane', [56]);
-=======
-        g.data('cane', [134]);
->>>>>>> 626cf7431892fcbe75bbcf30e639f157502c7696
+        g.data('cane', [65]);
         g.labels = {"0":"11/27"};
         g.draw();
