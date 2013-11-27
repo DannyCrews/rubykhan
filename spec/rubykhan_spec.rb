@@ -1,19 +1,15 @@
 require 'spec_helper'
 
 describe 'RubyKhan' do
-<<<<<<< HEAD
+
 	describe '.new' do
     
-=======
-  describe '.new' do
->>>>>>> 626cf7431892fcbe75bbcf30e639f157502c7696
     before do
       stub_request(:get, 'http://www.KhanAcademy.org/api/v1/topic/probability').
       to_return(body: fixture('probability.json'))
       @probability = KhanAcademy::Topic.get_info('probability')
     end
 
-<<<<<<< HEAD
     it "makes an API request" do
       expect(a_request(:get, 'http://www.KhanAcademy.org/api/v1/topic/probability')).to have_been_made
     end
@@ -27,12 +23,6 @@ describe 'RubyKhan' do
 		end
 
 	end
-=======
-    it "returns a KhanAcademy::Topic" do
-      expect(KhanAcademy::Topic.new('probability')).to be_a KhanAcademy::Topic
-    end
-  end
->>>>>>> 626cf7431892fcbe75bbcf30e639f157502c7696
 
   describe 'KhanAcademy::Topic.tree' do
     before do
