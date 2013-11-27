@@ -4,7 +4,6 @@ gem 'httparty'
 gem 'rake'
 
 group :development do
-	gem 'pry'
 	gem 'simplecov'
 	gem 'jeweler', '~> 1.8.7'
 	gem 'bundler', '~> 1.0'
