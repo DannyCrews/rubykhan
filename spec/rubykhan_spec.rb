@@ -52,10 +52,6 @@ describe 'RubyKhan' do
       expect(@all).to be_a Array
     end
 
-    it "returns an array of values when passed a key as an argument" do
-      @slugs = KhanAcademy::Topic.all('slug')
-      expect(@slugs.first).to eq("root")
-    end
   end
 
   describe "KhanAcademy::Playlist.get_videos" do
