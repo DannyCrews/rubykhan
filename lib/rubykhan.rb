@@ -37,10 +37,10 @@ module KhanAcademy
 			new(options)
 		end
 
-		def self.all
+		def self.all(key = "extended_slug")
 			uri = "http://www.khanacademy.org/api/v1/topictree"
 			options = HTTParty.get(uri).to_hash
-			values(options, 'slug')
+			values(options, key)
 		end
 
 	end
@@ -58,18 +58,19 @@ module KhanAcademy
 
 		def self.get_exercises(topic)
 			uri = "http://www.KhanAcademy.org/api/v1/playlists/#{topic}/exercises"
-			options = HTTParty.get(uri)
-			new(options.first)
+			options = HTTParty.get(uri).to_a
+			options.collect {|json| new(json)}
 		end
 
 		def self.get_videos(topic)
 			uri = "http://www.KhanAcademy.org/api/v1/playlists/#{topic}/videos"
-			options = HTTParty.get(uri)
-			new(options.first)
+			options = HTTParty.get(uri).to_a
+			options.collect {|json| new(json)}
 		end
 
 	end
 
 end
+
 
 
