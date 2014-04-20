@@ -122,7 +122,7 @@ module KhanAcademy
 
 	class Exercise < Khanable
 
-		@@attributes = [:date_added, :description, :download_urls, :duration, :extra_properties, :ka_url, :keywords, :kind, :readable_id, :relative_url, :title, :url, :views, :youtube_id]
+		@@attributes = [:author_name, :date_added, :description, :download_urls, :duration, :extra_properties, :ka_url, :keywords, :kind, :readable_id, :relative_url, :title, :url, :views, :youtube_id]
 		@@attributes.each {|attr| attr_accessor attr}
 
 		def self.retrieve(exercise)

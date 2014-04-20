@@ -5,13 +5,13 @@ describe 'RubyKhan' do
 	describe '.new' do
     
     before do
-      stub_request(:get, 'http://www.KhanAcademy.org/api/v1/topics/probability').
+      stub_request(:get, 'http://www.KhanAcademy.org/api/v1/topic/probability').
       to_return(body: fixture('probability.json'))
       @probability = KhanAcademy::Topic.retrieve('probability')
     end
 
     it "makes an API request" do
-      expect(a_request(:get, 'http://www.KhanAcademy.org/api/v1/topics/probability')).to have_been_made
+      expect(a_request(:get, 'http://www.KhanAcademy.org/api/v1/topic/probability')).to have_been_made
     end
 
     it "returns a KhanAcademy::Topic" do
@@ -56,7 +56,7 @@ describe 'RubyKhan' do
 
   describe "KhanAcademy::Topic.get_videos" do
     before do
-      stub_request(:get, "http://www.KhanAcademy.org/api/v1/topics/blood-vessels/videos").
+      stub_request(:get, "http://www.KhanAcademy.org/api/v1/topic/blood-vessels/videos").
       to_return(body: fixture('videos.json'))
       @blood_vessels = KhanAcademy::Topic.get_videos('blood-vessels')
     end
@@ -67,7 +67,7 @@ describe 'RubyKhan' do
     end
 
     it "makes an api call" do
-      expect(a_request(:get, 'http://www.KhanAcademy.org/api/v1/topics/blood-vessels/videos')).to have_been_made
+      expect(a_request(:get, 'http://www.KhanAcademy.org/api/v1/topic/blood-vessels/videos')).to have_been_made
     end
 
     it "returns an object whose attributes can be accessed with ruby methods" do
