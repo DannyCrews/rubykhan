@@ -50,7 +50,7 @@ module KhanAcademy
 
 		def self.all(key = "extended_slug")
 			tree = Topic.values(self.get_data("/topictree").to_hash,key)
-		ende
+		end
 
 		# SystemStackError: stack level too deep
 			# from /usr/lib/ruby/1.9.1/irb/workspace.rb:80
@@ -69,7 +69,7 @@ module KhanAcademy
 
 		# a.videos
 		def videos
-			Topic.get_videos(node_slug)
+			Topic.get_videos(slug)
 		end
 
 		def self.get_exercises(topic)

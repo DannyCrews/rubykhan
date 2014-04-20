@@ -63,28 +63,27 @@ algebra = KhanAcademy::Topic.retrieve("algebra")
 
 algebra.title
 algebra.description
-algebra.ka_url
 ```
 
-More specific topics (e.g. "differential-equations", "buddhist-art", "blood-vessels") can return videos and exercises. 
+More specific topics (e.g. "differential-equations", "buddhist-art", "blood-vessels") can return videos and exercises:
 
 ```ruby
 buddhist_art = KhanAcademy::Topic.get_exercises("buddhist-art").first
 buddhist_art.title
+buddhist_art.ka_url
 ```
 
 ```ruby
-blood_vessels = KhanAcademy::Topic.retrieve("blood-vessels")
 blood_vessels_videos = KhanAcademy::Topic.get_videos("blood-vessels").first
 blood_vessels_videos.description
 blood_vessels_videos.title
 blood_vessels_videos.ka_url
 ```
 
-To see the entire (huge) Topic Tree from Khan academy, use the Topic.tree method:
+You can also get a list of all Exercises:
 
 ```ruby
-KhanAcademy::Topic.tree
+exercises = KhanAcademy::Exercise.all
 ```
 
 More information about the Khan Academy API can be found at the [Khan Academy API Explorer](http://api-explorer.khanacademy.org/api/v1/).
