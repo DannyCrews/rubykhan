@@ -8,7 +8,7 @@
 
 [![Build Status](https://travis-ci.org/abigezunt/RubyKhan.png?branch=master)](https://travis-ci.org/abigezunt/RubyKhan)
 
-This is a wrapper for the [Khan Academy API](http://api-explorer.khanacademy.org/api/v1/).  It is a work in progress, and only supports part of the API.  Any assistance with implementing extra calls would be appreciated!
+This is a wrapper for the [Khan Academy API](http://api-explorer.khanacademy.org/).  It is a work in progress, and only supports part of the API.  Any assistance with implementing extra calls would be appreciated!
 
 ## Installation
 
@@ -60,12 +60,11 @@ You can get a Topic object by directly calling `.retrieve`:
 
 ```ruby
 algebra = KhanAcademy::Topic.retrieve("algebra")
-
 algebra.title
 algebra.description
 ```
 
-More specific topics (e.g. "differential-equations", "buddhist-art", "blood-vessels") can return videos and exercises:
+More specific topics (e.g. "differential-equations", "buddhist-art", "blood-vessels") can return exercises and videos:
 
 ```ruby
 buddhist_art = KhanAcademy::Topic.get_exercises("buddhist-art").first
@@ -86,7 +85,7 @@ You can also get a list of all Exercises:
 exercises = KhanAcademy::Exercise.all
 ```
 
-More information about the Khan Academy API can be found at the [Khan Academy API Explorer](http://api-explorer.khanacademy.org/api/v1/).
+More information about the Khan Academy API can be found at the [Khan Academy API Explorer](http://api-explorer.khanacademy.org/).
 
 ## Contributing
 
