@@ -96,6 +96,8 @@ More information about the Khan Academy API can be found at the [Khan Academy AP
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+Please make sure the tests pass (`rake spec`) and add your own before asking for a pull request.
+
 ## FAQ: 
 
 Q: What's up with the name?

@@ -7,7 +7,7 @@ describe 'RubyKhan' do
     before do
       stub_request(:get, 'http://www.KhanAcademy.org/api/v1/topics/probability').
       to_return(body: fixture('probability.json'))
-      @probability = KhanAcademy::Topic.get_info('probability')
+      @probability = KhanAcademy::Topic.retrieve('probability')
     end
 
     it "makes an API request" do
@@ -24,11 +24,11 @@ describe 'RubyKhan' do
 
 	end
 
-  describe 'KhanAcademy::Topic.tree' do
+  describe 'KhanAcademy::Topic.all' do
     before do
       stub_request(:get, 'http://www.KhanAcademy.org/api/v1/topictree').
       to_return(body: fixture('topictree.json'))
-      @topictree = KhanAcademy::Topic.tree
+      @topictree = KhanAcademy::Topic.all
     end
 
     it "makes an api request" do
@@ -63,7 +63,7 @@ describe 'RubyKhan' do
 
     it "instantiates an array of playlist objects" do
       expect(@blood_vessels).to be_a Array
-      expect(@blood_vessels.first).to be_a KhanAcademy::Topic
+      expect(@blood_vessels.first).to be_a KhanAcademy::Video
     end
 
     it "makes an api call" do
@@ -84,7 +84,7 @@ describe 'RubyKhan' do
 
     it "instantiates an array of playlist objects" do
       expect(@buddhist_art).to be_a Array
-      expect(@buddhist_art.first).to be_a KhanAcademy::Topic
+      expect(@buddhist_art.first).to be_a KhanAcademy::Exercise
     end
 
     it "makes an api call" do
